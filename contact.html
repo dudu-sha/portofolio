@@ -1,0 +1,97 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidiya Abas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script>
+      const copyContent = async () => {
+        try {
+          let text = document.getElementById("email").innerHTML;
+          await navigator.clipboard.writeText(text);
+          alert("Content copied to clipboard");
+        } catch (err) {
+          //   alert('Failed to copy: ', err);
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-white">
+    <div class="px-10 py-5">
+      <!-- Navbar -->
+      <nav class="flex h-40 pr-20 w-full justify-between fixed top-0 py-20">
+        <div class="flex">
+          <a href="#">
+            <h1 class="font-bold">Lid</h1>
+          </a>
+        </div>
+        <div>
+          <div class="flex">
+            <a href="http://"
+              ><img
+                class="w-10"
+                src="https://cdn.iconscout.com/icon/free/png-512/free-hamburger-menu-4562823-3856517.png?f=webp&w=512"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+      <div class="w-full flex justify-center items-center h-screen">
+        <div class="contactCard min-h-max">
+          <h1 class="text-3xl font-bold separator">Stay in touch?</h1>
+          <div class="w-full mt-10 flex justify-between items-center">
+            <div class=" ">
+              <h1 class="font-semibold text-lg">My Socials</h1>
+              <div class="flex justify-center items-center mt-10">
+                <a href="https://github.com/dudu-sha" target="_blank">
+                  <img
+                    src="https://cdn.iconscout.com/icon/free/png-512/free-github-169-1174970.png?f=webp&w=512"
+                    alt=""
+                    class="w-10"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/lidiya-abas/"
+                  target="_blank"
+                  class="ml-5"
+                >
+                  <img
+                    src="https://cdn.iconscout.com/icon/free/png-512/free-linkedin-160-461814.png?f=webp&w=512"
+                    alt=""
+                    class="w-10"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="ml-5">
+              <h1 class="font-semibold text-lg">Email?</h1>
+              <div class="flex justify-center items-center mt-10">
+                <a href="mailto:lidiyaabas9@gmail.com" target="_blank">
+                  <img
+                    src="https://cdn.iconscout.com/icon/free/png-512/free-email-2155119-1814289.png?f=webp&w=512"
+                    alt=""
+                    class="w-10"
+                  />
+                </a>
+                <h1 class="text-center ml-2 cursor-copy" id="email">
+                  lidiyaabas9@gmail.com
+                </h1>
+                <i
+                  class="fa fa-copy ml-2"
+                  style="font-size: large"
+                  onclick="copyContent()"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <!-- <h1 class="text-center">My Socials</h1> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+.contactCard {
+  width: 40rem;
+}
+.separator {
+  border-bottom-width: 0.1rem;
+  padding-bottom: 0.8rem;
+}
+
+.menu {
+  width: 100vw;
+  z-index: 15;
+}
+.demoImg {
+  background-image: url("https://i.pinimg.com/564x/05/46/46/05464693268fd1a5c3f82dc7c27c7467.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.textdesc {
+  z-index: 25;
+}
+.container {
+  overscroll-behavior: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.first {
+  background-image: url("images/remote.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.loading_wrapper {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.landing {
+  height: 97%;
+}
+.loading-inner-content {
+  background: #ffffff;
+  height: 100%;
+  width: 300%; /* items X image-size( 240px + space of margin ) */
+}
+.box {
+  position: relative;
+  width: 20%; /* image-size */
+  height: 100%;
+  margin: 2% 2% 0 0;
+  float: left;
+  overflow: hidden;
+  background: #ffffff;
+}
+.box:first-child {
+  margin-left: 2%;
+}
+.box:last-child {
+  margin-right: 2%;
+}
+.box-content {
+  z-index: 999;
+}
+.box-content > img {
+  width: 100%;
+}
+.bio {
+  font-family: CormorantSC, sans-serif;
+}
+/* .orange {
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+}
+.purple {
+  width: 100%;
+  height: 100%;
+  background-color: purple;
+}
+.green {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+}
+.gray {
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+} */
+.img {
+  z-index: -5;
+  opacity: 0.3;
+  width: 2rem;
+  height: 2rem;
+}
+.heading {
+  font-family: "Cormorant SC", serif;
+}
+.navibar {
+  z-index: 10;
+}
