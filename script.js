@@ -125,6 +125,7 @@ const copyContent = async (data) => {
     //
     let text = document.getElementById(data).innerHTML;
     await navigator.clipboard.writeText(text);
+    alert(`contact copied to clipboard`);
   } catch (err) {
     alert(
       `Error copying to clipboard , Please contact me with "+251927719556"`
@@ -147,7 +148,7 @@ function refresh() {
 function projects() {
   gsap.to(window, {
     duration: 1,
-    scrollTo: { y: "#section2", offsetY: 70 },
+    scrollTo: { y: "#section3", offsetY: 70 },
   });
 }
 // gsap.registerPlugin(ScrollTrigger);
