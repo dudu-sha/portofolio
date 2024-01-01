@@ -24,10 +24,16 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollToPlugin.min.js"
       defer
     ></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/Observer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap"
       rel="stylesheet"
@@ -38,9 +44,10 @@
   ></script> -->
     <script src="script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript"></script>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body class="bg-[#ffffff]">
+  <body class="bg-[#ffffff]" onLoad=" refresh()">
     <div class="px-10 py-5" style="z-index: 10">
       <!-- Navbar -->
       <nav
@@ -56,19 +63,24 @@
             src="https://cdn.iconscout.com/icon/free/png-512/free-hamburger-menu-4562823-3856517.png?f=webp&w=512"
             alt=""
           /> -->
-            <ul class="flex">
+            <ul class="flex heading">
               <li
-                class="px-4 w-20 h-10 hover:bg-black hover:text-white rounded-lg hover:text-lg flex justify-center items-center about"
+                class="px-4 w-20 h-10 text-lg hover:bg-black hover:text-white rounded-lg flex justify-center items-center about"
               >
                 About
               </li>
               <li
-                class="px-4 w-20 h-10 hover:bg-black hover:text-white rounded-lg ml-5 flex justify-center items-center"
+                class="px-4 w-20 text-lg h-10 hover:bg-black hover:text-white rounded-lg ml-1 flex justify-center items-center"
+              >
+                Skills
+              </li>
+              <li
+                class="px-4 w-20 text-lg h-10 hover:bg-black hover:text-white rounded-lg ml-1 flex justify-center items-center"
               >
                 Projects
               </li>
               <li
-                class="px-4 w-20 h-10 hover:bg-black hover:text-white rounded-lg ml-5 hover:text-lg flex justify-center items-center"
+                class="px-4 w-20 text-lg h-10 hover:bg-black hover:text-white rounded-lg ml-1 flex justify-center items-center"
               >
                 Contact
               </li>
@@ -87,8 +99,16 @@
           <h1 class="text-3xl text-center text-[#34495e] font-semibold">
             Hi, I am Lidiya | Software Developer & UI-UX Designer
           </h1>
-          <h1 class="text-lg text-center text-[#34495e] mt-5 font-medium">
-            Crafting cutting-edge websites with a touch of magic!
+
+          <h1 class="text-xl def text-center text-[#34495e] mt-5 font-medium">
+            <text>Crafting</text>
+            <text>Cutting-Edge</text>
+            <text>Websites</text>
+            <text>With</text>
+            <text>a</text>
+            <text>Touch</text>
+            <text>of</text>
+            <text>Magic!</text>
             <!-- I'm a web
           developer and UI/UX designer, infusing modern tech and animated
           charm into digital experiences. -->
@@ -106,7 +126,7 @@
               My works
             </button>
           </div>
-          <div class="links flex justify-center items-center mt-10">
+          <div class="links flex justify-center items-center mt-10 mb-20">
             <a href="https://github.com/dudu-sha" target="_blank">
               <img
                 src="https://cdn.iconscout.com/icon/free/png-512/free-github-169-1174970.png?f=webp&w=512"
@@ -126,17 +146,74 @@
               />
             </a>
           </div>
+          <bg class="img1 flex w-full justify-center min-h-max" id="img1">
+            <img class="invisible w-1 h-1" id="anchor" />
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-512/free-html-5-1-1175208.png?f=webp&w=512"
+              alt=""
+              class="img"
+              id="img"
+            />
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-512/free-css-131-722685.png?f=webp&w=512"
+              alt=""
+              class="img"
+              id="img"
+            />
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-512/free-javascript-3521515-2945018.png?f=webp&w=512"
+              alt=""
+              class="img"
+            />
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-512/free-tailwind-css-5285308-4406745.png?f=webp&w=512"
+              alt=""
+              class="img"
+            />
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-512/free-node-js-1174925.png?f=webp&w=512"
+              alt=""
+              class="img"
+            />
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-512/free-react-3-1175109.png?f=webp&w=512"
+              alt=""
+              class="img"
+            />
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-512/free-mongodb-3629020-3030245.png?f=webp&w=512"
+              alt=""
+              class="img"
+            />
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-512/free-express-8-1175029.png?f=webp&w=512"
+              alt=""
+              class="img"
+            />
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-512/free-figma-3521426-2944870.png?f=webp&w=512"
+              alt=""
+              class="img"
+              id="img"
+            />
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-512/free-canva-3823975-3175197.png?f=webp&w=512"
+              alt=""
+              class="img"
+            />
+          </bg>
         </div>
       </div>
+
       <h1
         class="text-3xl text-center text-[#34495e] font-semibold"
-        id="section1"
+        id="section1 section2"
       >
         About
       </h1>
       <!-- <div class="flex self-center w-10 h-10 bg-black"></div> -->
       <h1
-        class="px-40 py-20 heading text-lg text-center text-[#34495e] font-medium"
+        class="aboutsec py-20 heading text-lg text-center text-[#34495e] font-medium"
       >
         Hey there! I'm a coding and design enthusiast dedicated to shaping
         remarkable online experiences. From transforming lines of code into
@@ -149,7 +226,7 @@
       ></div>
       <h1
         class="text-3xl text-center text-[#34495e] font-semibold"
-        id="section2"
+        id="section3"
       >
         Projects
       </h1>
@@ -183,40 +260,70 @@
       <!-- </div> -->
       <h1
         class="text-3xl text-center text-[#34495e] mt-20 font-semibold"
-        id="section3"
+        id="section4"
       >
         Contact Me
       </h1>
       <div class="flex justify-between w-full items-center min-h-max py-10">
-        <div class="text-center w-full md:w-1/2">
-          <div class="flex w-full justify-end px-10">
-            <h1><b>Call Me - </b> (251)927719556</h1>
+        <div class="text-center mr-10 w-full md:w-1/2">
+          <div
+            class="flex cursor-copy justify-end"
+            onclick="copyContent('phone')"
+          >
             <img
               src="https://cdn.iconscout.com/icon/free/png-512/free-phone-2666572-2212584.png?f=webp&w=512"
               alt=""
-              class="w-5 h-5 ml-5"
+              class="w-5 h-5 mr-2"
             />
+            <h1><b>Call Me - </b> (251)927719556</h1>
+            <i class="fa fa-copy ml-2" style="font-size: large"></i>
+
+            <h1 id="phone" class="invisible w-1">+251927719556</h1>
+            <h1 id="email" class="invisible w-1">lidiyaabas9@gmail.com</h1>
           </div>
         </div>
-        <div class="w-1 h-28 bg-black"></div>
-        <div class="text-center ml-10 w-full md:w-1/2 flex justify-start">
-          <div>
-            <h1>Leave me a message</h1>
+        <div class="w-1 h-16 bg-black"></div>
+        <div class="text-center ml-10 w-full md:w-1/2">
+          <div
+            class="flex cursor-copy justify-start"
+            onclick="copyContent('email')"
+          >
+            <a href="mailto:lidiyaabas9@gmail.com" target="_blank">
+              <img
+                src="https://cdn.iconscout.com/icon/free/png-512/free-email-2155119-1814289.png?f=webp&w=512"
+                alt=""
+                class="w-5 h-5"
+              />
+            </a>
+            <h1 class="text-center ml-2" id="email">
+              <b>Email Me - </b>lidiyaabas9@gmail.com
+            </h1>
+            <i class="fa fa-copy ml-2" style="font-size: large"></i>
+          </div>
+
+          <!-- <h1>Leave me a message</h1>
             <input
               type="text"
               name=""
               id=""
               placeholder="Your Name"
-              class="w-48 h-8 mt-3 bg-gray-100 rounded-xl px-10"
+              class="w-48 h-10 text-sm mt-3 bg-gray-100 rounded-md px-10"
             />
             <input
               type="text"
               name=""
               id=""
               placeholder="Email Address"
-              class="w-48 h-8 mt-3 bg-gray-100 rounded-xl px-10"
+              class="w-48 ml-1 text-sm h-10 mt-3 bg-gray-100 rounded-md px-10"
             />
-          </div>
+            <div>
+              <textarea
+                class="w-full h-20 text-sm bg-gray-100 border mt-10 rounded-md"
+                placeholder="Your message"
+              >
+              </textarea> -->
+          <!-- </div> -->
+          <!-- </div> -->
         </div>
       </div>
 
@@ -265,56 +372,7 @@
       class="fixed top-0 left-0 w-full h-screen items-center opacity-20"
       style="z-index: 2"
     > -->
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-512/free-html-5-1-1175208.png?f=webp&w=512"
-        alt=""
-        class="img fixed left-1/4 top-2/3"
-      />
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-512/free-css-131-722685.png?f=webp&w=512"
-        alt=""
-        class="img fixed right-36 top-24"
-      />
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-512/free-figma-3521426-2944870.png?f=webp&w=512"
-        alt=""
-        class="img fixed right-48 top-1/3"
-      />
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-512/free-canva-3823975-3175197.png?f=webp&w=512"
-        alt=""
-        class="img fixed right-1/4 top-1/3"
-      />
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-512/free-javascript-3521515-2945018.png?f=webp&w=512"
-        alt=""
-        class="img fixed top-36 left-1/2"
-      />
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-512/free-tailwind-css-5285308-4406745.png?f=webp&w=512"
-        alt=""
-        class="img fixed top-2/4 left-36"
-      />
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-512/free-node-js-1174925.png?f=webp&w=512"
-        alt=""
-        class="img fixed right-1/4 bottom-1/4"
-      />
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-512/free-react-3-1175109.png?f=webp&w=512"
-        alt=""
-        class="img fixed right-16 bottom-24"
-      />
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-512/free-mongodb-3629020-3030245.png?f=webp&w=512"
-        alt=""
-        class="img fixed left-24 bottom-36"
-      />
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-512/free-express-8-1175029.png?f=webp&w=512"
-        alt=""
-        class="img fixed right-16 bottom-2/4"
-      />
+
       <!-- </div> -->
     </div>
   </body>

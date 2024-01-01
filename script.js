@@ -54,31 +54,93 @@ gsap.from(".img", {
   ease: "expoScale(0.5,7,none)",
   delay: 3.3,
 });
-document.querySelectorAll("ul li").forEach((btn, index) => {
-  btn.addEventListener("click", () => {
-    gsap.to(btn, {
-      duration: 1,
-      ease: "bounce.out",
-      y: "#section" + (index + 1),
-      offsetY: 70,
-    });
-    gsap.to(btn, {
-      duration: 1,
-      ease: "bounce.out",
-      y: 0,
-      delay: 1,
-    });
+let words = gsap.utils.toArray("text"),
+  tl = gsap.timeline({ delay: 2 }),
+  timePerCharacter = 0.05;
 
-    gsap.to(window, {
-      duration: 1,
-      delay: 1,
-      scrollTo: { y: "#section" + (index + 1), offsetY: 70 },
-    });
+words.forEach((el) => {
+  tl.from(el, {
+    text: "",
+    duration: el.innerHTML.length * timePerCharacter,
+    ease: "none",
+    delay: 0.1,
   });
 });
+document.querySelectorAll("ul li").forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    // gsap.to(btn, {
+    //   duration: 0.5,
+    //   ease: "bounce.out",
+    //   y: -20,
+    // });
+    // gsap.to(btn, {
+    //   duration: 0.5,
+    //   ease: "bounce.out",
+    //   y: 0,
+    //   delay: 0.5,
+    // });
+    if (index != 1) {
+      gsap.to(window, {
+        duration: 1,
+        delay: 0.5,
+        scrollTo: { y: "#section" + (index + 1), offsetY: 70 },
+      });
+    } else {
+      gsap.to(window, {
+        duration: 1,
+        delay: 0.5,
+        scrollTo: { y: "#section" + (index + 1), offsetY: 70 },
+      });
+
+      if (document.getElementById("anchor").style.opacity == 1) {
+        document.getElementById("anchor").style.opacity = 0;
+        let img = gsap.utils.toArray("bg img");
+        (tl = gsap.timeline({ delay: 0 })),
+          img.forEach((el) => {
+            tl.to(el, {
+              duration: 0.5,
+              ease: "expoScale(0.5,7,none)",
+              opacity: 0,
+            });
+          });
+      } else {
+        document.getElementById("anchor").style.opacity = 1;
+        let img = gsap.utils.toArray("bg img");
+        (tl = gsap.timeline({ delay: 0 })),
+          img.forEach((el) => {
+            tl.to(el, {
+              duration: 0.5,
+              ease: "expoScale(0.5,7,none)",
+              opacity: 1,
+            });
+          });
+        // document.getElementById("img").style.position = "static";
+      }
+    }
+  });
+});
+const copyContent = async (data) => {
+  try {
+    // var x = data;
+    //
+    let text = document.getElementById(data).innerHTML;
+    await navigator.clipboard.writeText(text);
+  } catch (err) {
+    alert(
+      `Error copying to clipboard , Please contact me with "+251927719556"`
+    );
+    //   alert('Failed to copy: ', err);
+  }
+};
 function home() {
   gsap.to(window, {
     duration: 1,
+    scrollTo: { y: "#home", offsetY: 70 },
+  });
+}
+function refresh() {
+  gsap.to(window, {
+    duration: 0.1,
     scrollTo: { y: "#home", offsetY: 70 },
   });
 }

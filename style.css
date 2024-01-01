@@ -88,15 +88,29 @@
   height: 100%;
   background-color: gray;
 } */
-.img {
+.img1 {
   z-index: -5;
-  opacity: 0.3;
+  opacity: 1;
+}
+.img {
   width: 2rem;
   height: 2rem;
+  margin-left: 1rem;
+  opacity: 0;
 }
 .heading {
   font-family: "Cormorant SC", serif;
 }
 .navibar {
   z-index: 10;
+}
+.aboutsec {
+  padding-right: 8rem;
+  padding-left: 8rem;
+}
+@media screen and (max-width: 890px) {
+  .aboutsec {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }
